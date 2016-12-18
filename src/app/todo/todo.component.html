@@ -1,6 +1,6 @@
-<form>
-  <input name="input-text" [(ngModel)]="input" type="text" placeholder="Some todo here">
-  <button class="btn" (click)="addTodos()">Add todos</button>
+<form #f="ngForm">
+  <input required name="input-text" [(ngModel)]="input" type="text" placeholder="Some todo here">
+  <button [disabled]="!f.form.valid" class="btn" (click)="addTodos()">Add todos</button>
 </form>
 
 <ul class="collection">
