@@ -1,0 +1,12 @@
+<form>
+  <input name="input-text" [(ngModel)]="input" type="text" placeholder="Some todo here">
+  <button class="btn" (click)="addTodos()">Add todos</button>
+</form>
+
+<ul class="collection">
+  <li class="collection-item dismissable" *ngFor="let todo of todos">
+    <input (click)="updateTodo(todo._id, todo.completed)" type="checkbox" [checked]="todo.completed">
+    <span [class]="todo.completed ? 'line': 'none'">{{todo.text}}</span>
+    <a (click)="deleteTodo(todo._id)" class="secondary-content"><i class="material-icons">close</i></a>
+  </li>
+</ul>

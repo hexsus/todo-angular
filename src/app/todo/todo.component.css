@@ -1,0 +1,11 @@
+.line {
+  text-decoration: line-through;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+  position: inherit !important;
+  left: 0 !important;
+  opacity: 1 !important;
+}
+.material-icons {
+  cursor: pointer;
+}
